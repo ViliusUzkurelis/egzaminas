@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.App-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 50px;
+    background-color: cyan;
+    width: 100%;
+}
+.App-logo {
+    font-size: 30px;
+}

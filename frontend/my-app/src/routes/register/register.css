@@ -1,0 +1,13 @@
+.register {
+    padding: 20px;
+}
+.register h1 {
+    text-align: center;
+}
+.register form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: auto;
+}

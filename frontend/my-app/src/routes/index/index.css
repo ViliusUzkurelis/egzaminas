@@ -1,0 +1,10 @@
+.Index {
+    width: 1280px;
+    margin: auto;
+    padding: 20px;
+}
+.Index .cities {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

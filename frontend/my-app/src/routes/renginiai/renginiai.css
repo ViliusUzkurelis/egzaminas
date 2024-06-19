@@ -1,0 +1,28 @@
+.rated {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: lime;
+    text-align: center;
+    width: 300px;
+    padding-block: 20px;
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+.stars {
+    display: flex;
+    justify-content: left;
+    flex-flow: row-reverse;
+}
+.star {
+    color: rgb(157, 157, 157);
+    transition: 0.1s;
+    cursor: pointer;
+}
+.star:hover,
+.star:hover ~ .star {
+  color: rgb(213, 213, 36); /* Yellow color on hover */
+}
