@@ -98,7 +98,6 @@ function Renginiai() {
     console.log(id, rating);
     try {
       await fetch("/rate", {
-        // Use relative URL
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -4,7 +4,7 @@ import { ReactSession } from 'react-client-session';
 import { useNavigate } from 'react-router-dom';
 
 
-function Register () {
+function Register ({ setAdmin }) {
 
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -18,7 +18,7 @@ function Register () {
     const surname = document.getElementById('surname').value;
 
     try {
-         await fetch('/users/register', { // Use relative URL
+         await fetch('/users/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,6 +32,13 @@ function Register () {
         }).then(response => {
             console.log("response");
             if (response.ok) {
+                if (email === 'admin@admin.com'){
+                    setAdmin(true);
+                    ReactSession.set("admin", true);
+                } else {
+                    setAdmin(false);
+                    ReactSession.set("admin", false);
+                }
                 ReactSession.set("loggedIn", true);
                 ReactSession.set("userEmail", email,);
                 console.log(ReactSession.get("loggedIn"));

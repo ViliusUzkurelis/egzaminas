@@ -22,7 +22,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/login" element={<Login setAdmin={setAdmin}/>}/>
-        <Route path="/register" element={<Register />}/>
+        <Route path="/register" element={<Register setAdmin={setAdmin}/>}/>
         <Route path="/renginiai/:miestas" element={<Renginiai />}/>
         <Route path="/admin" element={<Admin />}/>
       </Routes>
